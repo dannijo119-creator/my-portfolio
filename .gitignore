@@ -93,3 +93,28 @@ dist
 # Temporary folders
 tmp/
 temp/
+
+# Local development
+run-dev.bat
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux specific
+*~
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
