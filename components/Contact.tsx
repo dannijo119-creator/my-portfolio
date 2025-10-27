@@ -113,7 +113,7 @@ const Contact = () => {
   const socialLinks = [
     { name: 'GitHub', icon: Github, href: 'https://github.com/dannijo119-creator/my-portfolio', color: 'hover:bg-gray-800' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/adrienne-jones', color: 'hover:bg-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/adrienne-jones', color: 'hover:bg-blue-400' },
+    { name: 'Twitter', icon: Twitter, href: 'https://x.com/home', color: 'hover:bg-blue-400' },
   ]
 
   const containerVariants = {
