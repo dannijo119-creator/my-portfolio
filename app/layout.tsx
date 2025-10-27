@@ -8,13 +8,13 @@ import ClientThemeProvider from '@/components/ClientThemeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Your Name - Portfolio',
-  description: 'Modern portfolio showcasing my projects and skills as a full-stack developer',
-  keywords: 'portfolio, developer, web development, software engineer, react, nextjs',
-  authors: [{ name: 'Your Name' }],
+  title: 'Adrienne Jones - Portfolio',
+  description: 'Modern portfolio showcasing my projects and skills as a Technical Analyst specializing in AI and Next.js development',
+  keywords: 'portfolio, technical analyst, AI, machine learning, web development, software engineer, react, nextjs, trinidad',
+  authors: [{ name: 'Adrienne Jones' }],
   openGraph: {
-    title: 'Your Name - Portfolio',
-    description: 'Modern portfolio showcasing my projects and skills as a full-stack developer',
+    title: 'Adrienne Jones - Portfolio',
+    description: 'Modern portfolio showcasing my projects and skills as a Technical Analyst specializing in AI and Next.js development',
     type: 'website',
   },
 }

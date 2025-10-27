@@ -1,6 +1,6 @@
-# Modern Portfolio Website
+# Adrienne Jones - Portfolio
 
-A stunning, responsive personal portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
+A stunning, responsive personal portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Showcasing my work as a Technical Analyst specializing in AI and Next.js development.
 
 ## ✨ Features
 
