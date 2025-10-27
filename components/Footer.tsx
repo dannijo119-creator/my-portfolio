@@ -31,7 +31,7 @@ const Footer = () => {
     { 
       name: 'Email', 
       icon: Mail, 
-      href: 'mailto:adrienne.jones@example.com',
+      href: 'mailto:dannijo119@gmail.com',
       color: 'hover:bg-red-500 hover:text-white',
       bgColor: 'bg-red-100 text-red-800'
     },
