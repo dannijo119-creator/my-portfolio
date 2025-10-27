@@ -232,7 +232,7 @@ const Hero = () => {
             className="flex justify-center space-x-6 pt-8"
           >
             <motion.a
-              href="https://github.com/adrienne-jones"
+              href="https://github.com/dannijo119-creator"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors duration-300 text-white"

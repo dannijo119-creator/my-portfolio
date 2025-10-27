@@ -10,7 +10,7 @@ const Projects = () => {
       description: 'An intelligent system analysis tool that uses machine learning to identify bottlenecks, predict failures, and optimize performance across enterprise infrastructure.',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'TensorFlow', 'Next.js', 'PostgreSQL', 'Docker'],
-      github: 'https://github.com/adrienne-jones/ai-system-analyzer',
+      github: 'https://github.com/dannijo119-creator/ai-system-analyzer',
       live: 'https://ai-analyzer-demo.vercel.app',
       featured: true,
       stats: { stars: 67, views: 2100 },
@@ -21,7 +21,7 @@ const Projects = () => {
       description: 'A comprehensive BI dashboard that aggregates data from multiple sources, providing real-time insights and automated reporting for business stakeholders.',
       image: '/api/placeholder/600/400',
       technologies: ['Next.js', 'D3.js', 'Python', 'MongoDB', 'Chart.js'],
-      github: 'https://github.com/adrienne-jones/bi-dashboard',
+      github: 'https://github.com/dannijo119-creator/bi-dashboard',
       live: 'https://bi-dashboard-demo.vercel.app',
       featured: true,
       stats: { stars: 89, views: 3400 },
@@ -32,7 +32,7 @@ const Projects = () => {
       description: 'A workflow automation platform that streamlines business processes using AI and machine learning to reduce manual tasks and improve efficiency.',
       image: '/api/placeholder/600/400',
       technologies: ['React', 'Node.js', 'Python', 'Redis', 'AWS'],
-      github: 'https://github.com/adrienne-jones/process-automation',
+      github: 'https://github.com/dannijo119-creator/process-automation',
       live: 'https://automation-demo.vercel.app',
       featured: true,
       stats: { stars: 54, views: 1800 },
@@ -236,7 +236,7 @@ const Projects = () => {
           className="text-center mt-16"
         >
           <motion.a
-            href="https://github.com/adrienne-jones"
+            href="https://github.com/dannijo119-creator"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"

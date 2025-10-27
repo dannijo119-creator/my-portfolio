@@ -10,7 +10,7 @@ const Footer = () => {
     { 
       name: 'GitHub', 
       icon: Github, 
-      href: 'https://github.com/adrienne-jones',
+      href: 'https://github.com/dannijo119-creator',
       color: 'hover:bg-gray-900 hover:text-white',
       bgColor: 'bg-gray-100 text-gray-800'
     },
