@@ -105,7 +105,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Caribbean',
+      value: 'Trinidad and Tobago',
       href: '#',
     },
   ]
