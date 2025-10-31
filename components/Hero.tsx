@@ -52,7 +52,12 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Beautiful Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 dark:from-purple-900 dark:via-blue-900 dark:to-indigo-900">
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #FBBF24 100%)'
+        }}
+      >
         {/* Overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10"></div>
         
