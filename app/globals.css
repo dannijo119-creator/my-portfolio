@@ -5,15 +5,28 @@
 @tailwind utilities;
 
 :root {
-  /* Custom color palette */
-  --bg-main: #0B0C10;
-  --bg-surface: #161A1D;
-  --primary-accent-start: #00C6FF;
-  --primary-accent-end: #0072FF;
-  --secondary-accent: #8A2BE2;
-  --text-primary: #E5E5E5;
-  --text-muted: #9CA3AF;
-  --highlight-glow: #00FFFF;
+  /* Backgrounds */
+  --bg-900: #06050a;        /* near-black */
+  --bg-800: #0b0820;        /* deep midnight */
+  --bg-700: #111026;        /* dark navy */
+
+  /* Accents / Luxurious neons */
+  --accent-1: #7c3aed;      /* vivid violet */
+  --accent-2: #06b6d4;      /* electric cyan */
+  --accent-3: #ff7ab6;      /* pink highlight */
+
+  /* Glows */
+  --glow-1: rgba(124, 58, 237, 0.16);  /* violet glow */
+  --glow-2: rgba(6, 182, 212, 0.12);   /* cyan glow */
+
+  /* Text */
+  --text-100: #f8fafc;      /* soft white */
+  --text-200: #e2e8f0;      /* light gray */
+  --muted-300: #93a0b3;     /* muted grey/blue */
+
+  /* UI */
+  --glass: rgba(255, 255, 255, 0.04);  /* glass effect */
+  --border: rgba(255, 255, 255, 0.06); /* subtle border */
 }
 
 
@@ -43,24 +56,24 @@
   }
 
   .dark {
-    --background: 11 13% 5%;
-    --foreground: 0 0% 90%;
-    --card: 22 11% 10%;
-    --card-foreground: 0 0% 90%;
-    --popover: 22 11% 10%;
-    --popover-foreground: 0 0% 90%;
+    --background: 245 100% 2%;
+    --foreground: 210 40% 98%;
+    --card: 245 65% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 245 65% 8%;
+    --popover-foreground: 210 40% 98%;
     --primary: 195 100% 50%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 280 80% 60%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 22 11% 20%;
-    --muted-foreground: 210 11% 71%;
-    --accent: 280 80% 60%;
-    --accent-foreground: 0 0% 90%;
+    --primary-foreground: 245 100% 2%;
+    --secondary: 270 75% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 245 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 270 75% 60%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 22 11% 20%;
-    --input: 22 11% 20%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
     --ring: 195 100% 50%;
   }
 }
@@ -80,14 +93,16 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(90deg, #00C6FF, #0072FF);
+    background: linear-gradient(90deg, #7c3aed, #06b6d4, #ff7ab6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .glass-effect {
-    @apply backdrop-blur-sm bg-white/10 border border-white/20;
+    backdrop-filter: blur(8px);
+    background: var(--glass);
+    border: 1px solid var(--border);
   }
   
   .btn-primary {
@@ -105,11 +120,15 @@
   }
   
   .glow-border {
-    box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+    box-shadow: 0 0 20px var(--glow-2);
+  }
+  
+  .glow-border-violet {
+    box-shadow: 0 0 20px var(--glow-1);
   }
   
   .bg-animated {
-    background: linear-gradient(-45deg, #0B0C10, #161A1D, #0B0C10);
+    background: linear-gradient(-45deg, #06050a, #0b0820, #111026);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
   }
