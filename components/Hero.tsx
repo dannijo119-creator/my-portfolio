@@ -2,8 +2,11 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const Hero = () => {
+  const [imageError, setImageError] = useState(false)
+
   return (
     <section
       id="home"
@@ -18,14 +21,21 @@ const Hero = () => {
         className="mb-6"
       >
         <div className="relative w-40 h-40 rounded-full p-[3px] bg-gradient-accent">
-          <div className="relative w-full h-full rounded-full overflow-hidden">
-            <Image
-              src="/avatar.png"
-              alt="Adrienne Jones"
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary to-secondary">
+            {!imageError ? (
+              <Image
+                src="/avatar.png"
+                alt="Adrienne Jones"
+                fill
+                className="object-cover"
+                priority
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary">
+                <span className="text-4xl font-bold text-white">AJ</span>
+              </div>
+            )}
           </div>
         </div>
       </motion.div>
