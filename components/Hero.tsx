@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="flex gap-4">
               <a
                 href="#projects"
-                className="btn-accent px-5 py-3 rounded-xl shadow-lg"
+                className="bg-primary text-primary-foreground px-5 py-3 rounded-xl shadow-lg hover:bg-primary/90 transition-colors"
               >
                 View Projects
               </a>
@@ -51,7 +51,7 @@ const Hero = () => {
                 />
               </div>
             ) : (
-              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary shadow-lg">
+              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-primary shadow-lg">
                 <span className="text-5xl font-bold text-white">AJ</span>
               </div>
             )}
