@@ -89,11 +89,10 @@
     scroll-behavior: smooth;
   }
   body {
-    background: linear-gradient(180deg, var(--bg-900) 0%, #07041a 50%, #0b0820 100%);
+    background: var(--bg-900);
     color: var(--text-100);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-attachment: fixed;
     font-family: 'Inter', system-ui, sans-serif;
   }
 }
