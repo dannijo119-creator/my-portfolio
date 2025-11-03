@@ -37,20 +37,22 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Avatar (removed gradient block) */}
+          {/* Right side - Avatar with gradient block */}
           <div className="flex justify-center lg:justify-end">
-            {!imageError ? (
-              <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
-                <Image
-                  src="/avatar.png"
-                  alt="Adrienne Jones"
-                  fill
-                  className="object-cover"
-                  priority
-                  onError={() => setImageError(true)}
-                />
-              </div>
-            ) : null}
+            <div className="relative w-64 h-64 rounded-2xl bg-gradient-to-br from-purple-500 to-cyan-500 shadow-lg overflow-hidden">
+              {!imageError ? (
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/avatar.png"
+                    alt="Adrienne Jones"
+                    fill
+                    className="object-cover"
+                    priority
+                    onError={() => setImageError(true)}
+                  />
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
