@@ -16,7 +16,7 @@ const Hero = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="mb-6"
       >
-        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-glow">
+        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-[0_0_30px_rgba(99,102,241,0.4)]">
           <Image
             src="/avatar.png"
             alt="Adrienne Jones"
