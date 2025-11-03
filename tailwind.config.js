@@ -14,6 +14,7 @@ module.exports = {
         background: '#0F1117',
         surface: '#181B23',
         primary: '#6366F1',
+        'primary-foreground': '#F8FAFC',
         secondary: '#06B6D4',
         highlight: '#F472B6',
         textMain: '#E5E7EB',
