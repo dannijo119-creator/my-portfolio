@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Content */}
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-foreground">
+            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight gradient-text-purple-modern">
               Adrienne Jones
             </h1>
             <p className="text-lg text-muted-300 max-w-xl">
@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="flex gap-4">
               <a
                 href="#projects"
-                className="bg-primary text-primary-foreground px-5 py-3 rounded-xl shadow-lg hover:bg-primary/90 transition-colors"
+                className="bg-gradient-purple-modern text-white px-5 py-3 rounded-xl shadow-lg hover:opacity-90 transition-all duration-300"
               >
                 View Projects
               </a>
