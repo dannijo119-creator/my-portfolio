@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  /* Backgrounds */
-  --bg-900: #06050a;        /* near-black */
-  --bg-800: #0b0820;        /* deep midnight */
-  --bg-700: #111026;        /* dark navy */
+  /* Backgrounds - Modern Color Scheme */
+  --bg-900: #0F172A;        /* modern slate-900 */
+  --bg-800: #1E293B;        /* modern slate-800 */
+  --bg-700: #334155;        /* modern slate-700 */
   
   /* Accents / Luxurious neons */
   --accent-1: #7c3aed;      /* vivid violet */
@@ -89,7 +89,8 @@
     scroll-behavior: smooth;
   }
   body {
-    background: var(--bg-900);
+    background: #0F172A;
+    background-image: linear-gradient(to bottom, #0F172A 0%, #1E293B 100%);
     color: var(--text-100);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

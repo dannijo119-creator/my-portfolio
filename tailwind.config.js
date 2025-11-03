@@ -11,8 +11,8 @@ module.exports = {
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       colors: {
-        background: '#0F1117',
-        surface: '#181B23',
+        background: '#0F172A',
+        surface: '#1E293B',
         primary: '#6366F1',
         'primary-foreground': '#F8FAFC',
         secondary: '#06B6D4',
@@ -43,7 +43,7 @@ module.exports = {
         'gradient-purple-cyan': 'linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%)',
         'gradient-cyan-pink': 'linear-gradient(135deg, #06B6D4 0%, #F472B6 100%)',
         'gradient-rainbow': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6, #FBBF24)',
-        'gradient-dark': 'linear-gradient(135deg, #0F1117 0%, #181B23 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
       },
       boxShadow: {
         glow: '0 0 24px rgba(99,102,241,0.25)',
