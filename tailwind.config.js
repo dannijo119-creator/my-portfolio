@@ -32,6 +32,15 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-accent': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6)',
+        'gradient-primary': 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)',
+        'gradient-secondary': 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
+        'gradient-purple': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
+        'gradient-cyan': 'linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%)',
+        'gradient-pink': 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)',
+        'gradient-purple-cyan': 'linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%)',
+        'gradient-cyan-pink': 'linear-gradient(135deg, #06B6D4 0%, #F472B6 100%)',
+        'gradient-rainbow': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6, #FBBF24)',
+        'gradient-dark': 'linear-gradient(135deg, #0F1117 0%, #181B23 100%)',
       },
       boxShadow: {
         glow: '0 0 24px rgba(99,102,241,0.25)',
