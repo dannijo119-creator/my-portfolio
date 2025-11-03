@@ -63,23 +63,22 @@ const Hero = () => {
               whileHover={{ scale: 1.05, rotate: 3 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-full p-[3px] bg-gradient-accent">
-                <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary to-secondary">
-                  {!imageError ? (
-                    <Image
-                      src="/avatar.jpg"
-                      alt="Adrienne Jones"
-                      fill
-                      className="object-cover"
-                      priority
-                      onError={() => setImageError(true)}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary">
-                      <span className="text-5xl lg:text-6xl font-bold text-white">AJ</span>
-                    </div>
-                  )}
-                </div>
+              <div className="relative rounded-full p-[3px] bg-gradient-accent">
+                {!imageError ? (
+                  <Image
+                    src="/avatar.jpg"
+                    alt="Adrienne Jones"
+                    width={160}
+                    height={160}
+                    className="rounded-full object-cover"
+                    priority
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary">
+                    <span className="text-4xl font-bold text-white">AJ</span>
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
