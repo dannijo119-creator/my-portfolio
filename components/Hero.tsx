@@ -15,14 +15,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side - Content */}
           <div className="space-y-6">
-            <h1
-              className="text-5xl lg:text-7xl font-extrabold leading-tight"
-              style={{
-                background: 'linear-gradient(90deg, #7c3aed, #06b6d4)',
-                WebkitBackgroundClip: 'text',
-                color: 'transparent',
-              }}
-            >
+            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-foreground">
               Adrienne Jones
             </h1>
             <p className="text-lg text-muted-300 max-w-xl">
