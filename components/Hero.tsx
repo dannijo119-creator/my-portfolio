@@ -14,6 +14,7 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
+        whileHover={{ scale: 1.05, rotate: 3 }}
         className="mb-6"
       >
         <div className="relative w-40 h-40 rounded-full p-[3px] bg-gradient-accent">
