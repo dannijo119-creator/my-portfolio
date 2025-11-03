@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Right side - Avatar */}
           <div className="flex justify-center lg:justify-end">
             {!imageError ? (
-              <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
                 <Image
                   src="/avatar.png"
                   alt="Adrienne Jones"
@@ -51,7 +51,7 @@ const Hero = () => {
                 />
               </div>
             ) : (
-              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-primary shadow-lg">
+              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-primary">
                 <span className="text-5xl font-bold text-white">AJ</span>
               </div>
             )}
