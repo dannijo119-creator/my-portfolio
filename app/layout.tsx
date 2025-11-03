@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import ClientThemeProvider from '@/components/ClientThemeProvider'
 
-
-const inter = Inter({ subsets: ['latin'] })
+export const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+export const poppins = Poppins({ weight: ['600', '700', '800'], subsets: ['latin'], variable: '--font-poppins' })
 
 export const metadata: Metadata = {
   title: 'Your Name - Portfolio',
@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable} ${inter.className} antialiased`}>
         <ClientThemeProvider>
           <Navigation />
           <main>{children}</main>
