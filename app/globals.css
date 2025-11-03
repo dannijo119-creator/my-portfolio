@@ -160,6 +160,16 @@
     100% { background-position: 0% 50%; }
   }
   
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .animate-float-18s {
+    animation: float 18s infinite;
+  }
+  
   /* Mobile-specific utilities */
   .mobile-padding {
     @apply px-4 sm:px-6 lg:px-8;
