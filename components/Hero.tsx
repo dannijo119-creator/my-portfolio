@@ -46,24 +46,22 @@ const Hero = () => {
 
           {/* Right side - Avatar */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative rounded-full p-[3px] bg-gradient-accent">
-              {!imageError ? (
-                <div className="relative w-40 h-40">
-                  <Image
-                    src="/avatar.png"
-                    alt="Adrienne Jones"
-                    fill
-                    className="object-cover rounded-full"
-                    priority
-                    onError={() => setImageError(true)}
-                  />
-                </div>
-              ) : (
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary">
-                  <span className="text-4xl font-bold text-white">AJ</span>
-                </div>
-              )}
-            </div>
+            {!imageError ? (
+              <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/avatar.png"
+                  alt="Adrienne Jones"
+                  fill
+                  className="object-cover"
+                  priority
+                  onError={() => setImageError(true)}
+                />
+              </div>
+            ) : (
+              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary shadow-lg">
+                <span className="text-5xl font-bold text-white">AJ</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
