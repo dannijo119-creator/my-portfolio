@@ -44,8 +44,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Avatar and Decorative Square */}
-          <div className="flex flex-col items-center lg:items-end gap-6">
+          {/* Right side - Avatar */}
+          <div className="flex justify-center lg:justify-end">
             <div className="relative rounded-full p-[3px] bg-gradient-accent">
               {!imageError ? (
                 <div className="relative w-40 h-40">
@@ -64,7 +64,6 @@ const Hero = () => {
                 </div>
               )}
             </div>
-            <div className="relative w-64 h-64 rounded-2xl bg-gradient-to-br from-purple-500 to-cyan-500 shadow-lg" />
           </div>
         </div>
       </div>
