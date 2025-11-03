@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './contexts/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -15,45 +11,17 @@ module.exports = {
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // Luxury palette colors
-        bg900: '#06050a',
-        bg800: '#0b0820',
-        accentViolet: '#7c3aed',
-        accentCyan: '#06b6d4',
-        accentPink: '#ff7ab6',
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
+        background: '#0F1117',
+        surface: '#181B23',
+        primary: '#6366F1',
+        secondary: '#06B6D4',
+        highlight: '#F472B6',
+        textMain: '#E5E7EB',
+        textMuted: '#9CA3AF',
+        border: '#1F2937',
+        // Legacy support
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-          300: "#93a0b3",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          300: '#9CA3AF',
         },
       },
       borderRadius: {
@@ -61,7 +29,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        'gradient-accent': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6)',
+      },
       boxShadow: {
+        glow: '0 0 24px rgba(99,102,241,0.25)',
         glowViolet: '0 8px 30px rgba(124,58,237,0.14)',
         glowCyan: '0 8px 30px rgba(6,182,212,0.10)',
       },
