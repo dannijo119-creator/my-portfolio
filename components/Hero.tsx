@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Avatar */}
+          {/* Right side - Avatar (removed gradient block) */}
           <div className="flex justify-center lg:justify-end">
             {!imageError ? (
               <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
@@ -50,11 +50,7 @@ const Hero = () => {
                   onError={() => setImageError(true)}
                 />
               </div>
-            ) : (
-              <div className="w-64 h-64 flex items-center justify-center rounded-2xl bg-primary">
-                <span className="text-5xl font-bold text-white">AJ</span>
-              </div>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
