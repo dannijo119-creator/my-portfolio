@@ -2,18 +2,25 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './contexts/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './contexts/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       fontFamily: {
+        sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui'],
+        display: ['var(--font-poppins)', 'Poppins', 'Inter'],
         inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       colors: {
+        // Luxury palette colors
+        bg900: '#06050a',
+        bg800: '#0b0820',
+        accentViolet: '#7c3aed',
+        accentCyan: '#06b6d4',
+        accentPink: '#ff7ab6',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -52,6 +59,10 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        glowViolet: '0 8px 30px rgba(124,58,237,0.14)',
+        glowCyan: '0 8px 30px rgba(6,182,212,0.10)',
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
