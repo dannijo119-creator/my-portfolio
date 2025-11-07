@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false)
+  const { theme, toggleTheme } = useTheme()
   
   useEffect(() => {
     setMounted(true)
@@ -23,7 +24,6 @@ const ThemeToggle = () => {
     )
   }
   
-  const { theme, toggleTheme } = useTheme()
   const currentTheme = theme
 
   return (
