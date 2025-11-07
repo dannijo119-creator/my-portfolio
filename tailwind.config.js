@@ -11,8 +11,8 @@ module.exports = {
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       colors: {
-        background: '#0F172A',
-        surface: '#1E293B',
+        background: '#0F1117',
+        surface: '#181B23',
         primary: '#6366F1',
         'primary-foreground': '#F8FAFC',
         secondary: '#06B6D4',
@@ -31,19 +31,23 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
         'gradient-accent': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6)',
         'gradient-primary': 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)',
         'gradient-secondary': 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
         'gradient-purple': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
-        'gradient-purple-modern': 'linear-gradient(135deg, #9333EA 0%, #7C3AED 50%, #A855F7 100%)',
-        'gradient-purple-deep': 'linear-gradient(135deg, #6D28D9 0%, #9333EA 100%)',
-        'gradient-purple-violet': 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)',
         'gradient-cyan': 'linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%)',
         'gradient-pink': 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)',
         'gradient-purple-cyan': 'linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%)',
         'gradient-cyan-pink': 'linear-gradient(135deg, #06B6D4 0%, #F472B6 100%)',
         'gradient-rainbow': 'linear-gradient(90deg, #6366F1, #06B6D4, #F472B6, #FBBF24)',
-        'gradient-dark': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #0F1117 0%, #181B23 100%)',
+        'gradient-modern': 'linear-gradient(135deg, #667EEA 0%, #764BA2 25%, #F093FB 50%, #4FACFE 75%, #00F2FE 100%)',
+        'gradient-vibrant': 'linear-gradient(135deg, #667EEA 0%, #764BA2 20%, #F093FB 40%, #4FACFE 60%, #00F2FE 80%, #43E97B 100%)',
+        'gradient-sunset': 'linear-gradient(135deg, #FA709A 0%, #FEE140 25%, #30CFD0 50%, #330867 75%, #764BA2 100%)',
+        'gradient-ocean': 'linear-gradient(135deg, #667EEA 0%, #764BA2 25%, #4FACFE 50%, #00F2FE 75%, #43E97B 100%)',
+        'gradient-neon': 'linear-gradient(135deg, #667EEA 0%, #764BA2 20%, #F093FB 40%, #4FACFE 60%, #00F2FE 80%, #A8EDEA 100%)',
+        'gradient-aurora': 'linear-gradient(135deg, #667EEA 0%, #764BA2 15%, #F093FB 30%, #4FACFE 45%, #00F2FE 60%, #43E97B 75%, #FA709A 90%, #FEE140 100%)',
       },
       boxShadow: {
         glow: '0 0 24px rgba(99,102,241,0.25)',
@@ -55,6 +59,7 @@ module.exports = {
         "slide-up": "slideUp 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
         "gradient": "gradient 8s ease infinite",
+        "shimmer": "shimmer 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -78,6 +83,10 @@ module.exports = {
             "background-size": "200% 200%",
             "background-position": "right center"
           },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
     },

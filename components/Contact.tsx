@@ -280,6 +280,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 bg-background dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
                       errors.name ? 'border-red-500 focus:ring-red-500' : 'border-input'
                     }`}
@@ -303,6 +304,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 bg-background dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
                       errors.email ? 'border-red-500 focus:ring-red-500' : 'border-input'
                     }`}
@@ -326,6 +328,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
+                  autoComplete="off"
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 bg-background dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
                     errors.subject ? 'border-red-500 focus:ring-red-500' : 'border-input'
                   }`}
@@ -349,6 +352,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
+                  autoComplete="off"
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 resize-none bg-background dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
                     errors.message ? 'border-red-500 focus:ring-red-500' : 'border-input'
                   }`}

@@ -24,6 +24,7 @@ const ThemeToggle = () => {
   }
   
   const { theme, toggleTheme } = useTheme()
+  const currentTheme = theme
 
   return (
     <motion.button
@@ -31,20 +32,20 @@ const ThemeToggle = () => {
       className="relative p-2 rounded-lg bg-card hover:bg-accent transition-colors duration-300 border border-border"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      aria-label={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} mode`}
     >
       <motion.div
         className="relative w-6 h-6"
         initial={false}
-        animate={{ rotate: theme === 'dark' ? 180 : 0 }}
+        animate={{ rotate: currentTheme === 'dark' ? 180 : 0 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
       >
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           initial={false}
           animate={{ 
-            opacity: theme === 'light' ? 1 : 0,
-            scale: theme === 'light' ? 1 : 0.8
+            opacity: currentTheme === 'light' ? 1 : 0,
+            scale: currentTheme === 'light' ? 1 : 0.8
           }}
           transition={{ duration: 0.2 }}
         >
@@ -54,8 +55,8 @@ const ThemeToggle = () => {
           className="absolute inset-0 flex items-center justify-center"
           initial={false}
           animate={{ 
-            opacity: theme === 'dark' ? 1 : 0,
-            scale: theme === 'dark' ? 1 : 0.8
+            opacity: currentTheme === 'dark' ? 1 : 0,
+            scale: currentTheme === 'dark' ? 1 : 0.8
           }}
           transition={{ duration: 0.2 }}
         >

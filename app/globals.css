@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  /* Backgrounds - Modern Color Scheme */
-  --bg-900: #0F172A;        /* modern slate-900 */
-  --bg-800: #1E293B;        /* modern slate-800 */
-  --bg-700: #334155;        /* modern slate-700 */
+  /* Backgrounds */
+  --bg-900: #06050a;        /* near-black */
+  --bg-800: #0b0820;        /* deep midnight */
+  --bg-700: #111026;        /* dark navy */
   
   /* Accents / Luxurious neons */
   --accent-1: #7c3aed;      /* vivid violet */
@@ -87,14 +87,23 @@
   }
   html {
     scroll-behavior: smooth;
+    background: transparent;
   }
   body {
-    background: #0F172A;
-    background-image: linear-gradient(to bottom, #0F172A 0%, #1E293B 100%);
+    @apply bg-cover bg-center bg-fixed transition-all duration-700;
     color: var(--text-100);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  body.light-mode {
+    background-image: url('/bg-light-sunny.jpg');
+  }
+
+  body.dark-mode {
+    background-image: url('/bg-dark-stars.jpg');
   }
 }
 
@@ -120,15 +129,50 @@
     background-clip: text;
   }
   
-  .gradient-text-purple-modern {
-    background: linear-gradient(135deg, #9333EA 0%, #7C3AED 50%, #A855F7 100%);
+  .gradient-text-modern {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 25%, #F093FB 50%, #4FACFE 75%, #00F2FE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .gradient-text-purple-deep {
-    background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
+  .gradient-text-vibrant {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 20%, #F093FB 40%, #4FACFE 60%, #00F2FE 80%, #43E97B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-animated {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 20%, #F093FB 40%, #4FACFE 60%, #00F2FE 80%, #43E97B 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-text-sunset {
+    background: linear-gradient(135deg, #FA709A 0%, #FEE140 25%, #30CFD0 50%, #330867 75%, #764BA2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-aurora {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 15%, #F093FB 30%, #4FACFE 45%, #00F2FE 60%, #43E97B 75%, #FA709A 90%, #FEE140 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -220,5 +264,82 @@
     text-decoration: none;
     box-shadow: 0 8px 30px rgba(6, 182, 212, 0.06);
     transform: translateY(-2px);
+  }
+  
+  /* Starry night animations */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  
+  /* Sunny day animations */
+  @keyframes floatCloud {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(20px) translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+  /* Multi-color gradient background animation */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Shimmer animation for Hero gradient */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Alternative gradient backgrounds */
+  .bg-gradient-multicolor {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 25%, #F093FB 50%, #4FACFE 75%, #00F2FE 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  .bg-gradient-vibrant {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 20%, #F093FB 40%, #4FACFE 60%, #00F2FE 80%, #43E97B 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+  }
+  
+  .bg-gradient-aurora {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 15%, #F093FB 30%, #4FACFE 45%, #00F2FE 60%, #43E97B 75%, #FA709A 90%, #FEE140 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
   }
 }

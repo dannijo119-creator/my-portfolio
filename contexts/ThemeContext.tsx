@@ -30,23 +30,33 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Get theme from localStorage or default to light
     const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme) {
-      setTheme(savedTheme)
+    const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    
+    // Set initial body class
+    if (initialTheme === 'dark') {
+      document.body.classList.add('dark-mode')
+      document.body.classList.remove('light-mode')
     } else {
-      // Check system preference
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      setTheme(systemTheme)
+      document.body.classList.add('light-mode')
+      document.body.classList.remove('dark-mode')
     }
+    
+    setTheme(initialTheme)
     setMounted(true)
   }, [])
 
   useEffect(() => {
     if (mounted) {
       localStorage.setItem('theme', theme)
+      // Update html class for Tailwind dark mode
       if (theme === 'dark') {
         document.documentElement.classList.add('dark')
+        document.body.classList.remove('light-mode')
+        document.body.classList.add('dark-mode')
       } else {
         document.documentElement.classList.remove('dark')
+        document.body.classList.remove('dark-mode')
+        document.body.classList.add('light-mode')
       }
     }
   }, [theme, mounted])
